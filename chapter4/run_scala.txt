@@ -1,0 +1,15 @@
+1. Create scala project directory src/main/scala/<package>
+2. Create .scala file
+3. Create build.sbt file
+    - name
+    - version
+    - scalaVersion
+    - library
+4. Run "sbt clean package" in the directory where build.sbt is
+    - build.sbt should be in the same directory as the src folder
+5. Submit spark job
+    $SPARK_HOME/bin/spark-submit --class main.scala.<package>.<scala file> \
+    ./target/scala-<scalaVersion>/main-scala-<package>.<scalaVersion>-<version>.jar \
+    args
+6. The job can be submitted via a bash file as well. see chapter4/run_imageFile/sh \
+    to run submit the spark job and run the imageFile package
